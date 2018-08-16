@@ -8,7 +8,6 @@
             <div v-if="!isLoaded" class="cssload-container">
               <div class="cssload-speeding-wheel"></div>
             </div>
-
             <div class="header">
               <div class="top">
                 <div class="check"></div>
@@ -16,7 +15,6 @@
                   <h5>Comments</h5>
                   <p>Why do you love Media Lab?</p>
                 </div>
-
               </div>
               <b-row class="bottom">
                 <b-col class="stars">
@@ -28,7 +26,6 @@
                   {{ total }} Comments
                 </b-col>
               </b-row>
-
             </div>
             <div class="comments-body">
               <div v-for="(comment, index) in comments" :key="comment.id">
@@ -39,7 +36,6 @@
               <b-input-group>
                 <b-form-input v-model="comment" placeholder="Add a comment..."></b-form-input>
                 <b-input-group-append>
-
                   <b-btn @click="postComment" variant="secondary">Post</b-btn>
                 </b-input-group-append>
               </b-input-group>
