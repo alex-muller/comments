@@ -33338,10 +33338,6 @@ module.exports = function spread(callback) {
 /***/ (function(module, exports, __webpack_require__) {
 
 var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(218)
-}
 var normalizeComponent = __webpack_require__(74)
 /* script */
 var __vue_script__ = __webpack_require__(221)
@@ -33350,7 +33346,7 @@ var __vue_template__ = __webpack_require__(227)
 /* template functional */
 var __vue_template_functional__ = false
 /* styles */
-var __vue_styles__ = injectStyle
+var __vue_styles__ = null
 /* scopeId */
 var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
@@ -33385,46 +33381,8 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 218 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(219);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(73)("06cb0812", content, false, {});
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-66ab2f82\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-66ab2f82\",\"scoped\":false,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./App.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 219 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(10)(false);
-// imports
-
-
-// module
-exports.push([module.i, "\nbody {\n  background-color: #eee;\n}\np {\n  font-size: 14px;\n}\n.inline {\n  display: inline-block;\n}\n.comments {\n  background-color: #fff;\n  position: relative;\n  overflow: hidden;\n}\n.comments .comments-body {\n    padding: 10px;\n    padding-top: 130px;\n    height: 470px;\n    overflow: auto;\n    padding-right: 15px;\n    -webkit-box-sizing: content-box;\n            box-sizing: content-box;\n    width: 100%;\n}\n.comments .comments-body .comment {\n      position: relative;\n      margin: 20px 0;\n      border-top: 1px solid #eee;\n      padding: 10px;\n}\n.comments .comments-body .comment p {\n        color: #888;\n        font-size: 12px;\n}\n.comments .comments-body .comment h6 {\n        font-size: 14px;\n        display: inline-block;\n}\n.comments .comments-body .comment span.time {\n        color: #888;\n        position: absolute;\n        right: 10px;\n        font-size: 10px;\n}\n.comments .header {\n    width: 100%;\n    position: absolute;\n    z-index: 2;\n}\n.comments .header .top {\n      background-color: rgba(0, 0, 0, 0.7);\n      padding: 10px;\n      color: #fff;\n}\n.comments .header .top h5, .comments .header .top p {\n        margin-bottom: 0;\n}\n.comments .header .top .check {\n        width: 50px;\n        height: 50px;\n        background-color: black;\n        border-radius: 50%;\n        display: inline-block;\n        border: 2px solid white;\n        position: relative;\n        margin-right: 10px;\n        vertical-align: top;\n}\n.comments .header .top .check::before {\n          content: '';\n          position: absolute;\n          display: block;\n          width: 16px;\n          height: 14px;\n          border: 3px solid white;\n          border-top: none;\n          border-left: none;\n          -webkit-transform: rotate(45deg);\n                  transform: rotate(45deg);\n          top: 14px;\n          left: 15px;\n}\n.comments .header .bottom {\n      text-align: center;\n      margin: 0 !important;\n      -webkit-box-shadow: 0px 2px 10px -6px rgba(0, 0, 0, 0.75);\n              box-shadow: 0px 2px 10px -6px rgba(0, 0, 0, 0.75);\n}\n.comments .header .bottom > div {\n        padding: 10px;\n        background-color: white;\n}\n.comments .header .bottom .stars {\n        color: #6ab5bf;\n        fill: #6ab5bf;\n        border-right: 1px solid #ddd;\n}\n.comments .header .bottom .comments-num {\n        color: #5d5d5d;\n        fill: #5d5d5d;\n}\n.comments .header svg {\n      width: 25px;\n      height: 25px;\n}\n.comments .photo {\n    border-radius: 4px;\n    width: 60px;\n    height: 60px;\n    background-size: cover;\n    background-repeat: no-repeat;\n    background-position: center center;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
+/* 218 */,
+/* 219 */,
 /* 220 */
 /***/ (function(module, exports) {
 

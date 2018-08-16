@@ -1,3 +1,136 @@
+body {
+  background-color: #eee;
+}
+
+p {
+  font-size: 14px;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.comments {
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+.comments .comments-body {
+  padding: 10px;
+  padding-top: 130px;
+  height: 470px;
+  overflow: auto;
+  padding-right: 15px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  width: 100%;
+}
+
+.comments .comments-body .comment {
+  position: relative;
+  border-top: 1px solid #eee;
+  padding: 15px 10px;
+}
+
+.comments .comments-body .comment p {
+  color: #888;
+  font-size: 12px;
+}
+
+.comments .comments-body .comment h6 {
+  font-size: 14px;
+  display: inline-block;
+}
+
+.comments .comments-body .comment span.time {
+  color: #888;
+  position: absolute;
+  right: 10px;
+  font-size: 10px;
+}
+
+.comments .header {
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.comments .header .top {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  color: #fff;
+}
+
+.comments .header .top h5,
+.comments .header .top p {
+  margin-bottom: 0;
+}
+
+.comments .header .top .check {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  display: inline-block;
+  border: 2px solid white;
+  position: relative;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+.comments .header .top .check::before {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 16px;
+  height: 14px;
+  border: 3px solid white;
+  border-top: none;
+  border-left: none;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 14px;
+  left: 15px;
+}
+
+.comments .header .bottom {
+  text-align: center;
+  margin: 0 !important;
+  -webkit-box-shadow: 0px 2px 10px -6px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 2px 10px -6px rgba(0, 0, 0, 0.75);
+}
+
+.comments .header .bottom > div {
+  padding: 10px;
+  background-color: white;
+}
+
+.comments .header .bottom .stars {
+  color: #6ab5bf;
+  fill: #6ab5bf;
+  border-right: 1px solid #ddd;
+}
+
+.comments .header .bottom .comments-num {
+  color: #5d5d5d;
+  fill: #5d5d5d;
+}
+
+.comments .header svg {
+  width: 25px;
+  height: 25px;
+}
+
+.comments .photo {
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 .cssload-container {
   text-align: center;
   position: absolute;
