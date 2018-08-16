@@ -2,6 +2,7 @@ import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import './../sass/app.scss'
 import Axios from 'axios'
 
 window.axios = Axios
